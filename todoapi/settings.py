@@ -18,6 +18,10 @@ INSTALLED_APPS = [
     'corsheaders',
     'guardian',
     'django_filters',
+
+    'users',
+    'permissions',
+    'todos',
 ]
 
 MIDDLEWARE = [
