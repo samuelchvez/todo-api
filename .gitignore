@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Mac OSX
+.DS_Store
+
+# Local configurations
+todoapi/local.py

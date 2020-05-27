@@ -1,0 +1,23 @@
+import os
+
+
+DEBUG = True
+LANGUAGE_CODE = 'en'
+ALLOWED_HOSTS = eval(os.getenv('HOST', "['127.0.0.1']"))
+SECRET_KEY = os.getenv('SECRET_KEY', 'f3rf5do4269pgbg&x62ny3r$=i9r938y*ym#00*upzee-91&ir')
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DB_NAME', 'todo'),
+        'USER': os.getenv('DB_USER', 'postgres'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'postgres'),
+        'HOST': os.getenv('DB_HOST', 'localhost'),
+        'PORT': os.getenv('DB_PORT', '5432'),
+    }
+}
+HOST_DOMAIN = f'https://{os.getenv("HOST_DOMAIN", "127.0.0.1")}'
+CORS_ORIGIN_WHITELIST = (
+    'http://localhost:8080',
+    'http://0.0.0.0:8080',
+)
+CORS_ORIGIN_ALLOW_ALL = True
