@@ -19,4 +19,4 @@ class TodoItem(models.Model):
     )
     title = models.TextField(null=True, blank=True)
     priority = models.PositiveIntegerField(default=0)
-    due_date = models.DateField()
+    time = models.PositiveIntegerField(default=0)

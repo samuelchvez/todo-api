@@ -21,5 +21,5 @@ class TodoItemSerializer(serializers.ModelSerializer):
             'belongs_to',
             'title',
             'priority',
-            'due_date',
+            'time',
         )
